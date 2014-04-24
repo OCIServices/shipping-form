@@ -1,0 +1,44 @@
+<h1>Listing shipments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="4"></th>
+      <th>Address type</th>
+      <th>Company</th>
+      <th>Attention</th>
+      <th>Address1</th>
+      <th>Zip</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Sender name</th>
+      <th>Sender email</th>
+      <th>Sender phone</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shipments.each do |shipment| %>
+      <tr>
+        <td><%= link_to 'PDF', pdf_shipment_path(shipment) %></td>
+        <td><%= link_to 'Show', shipment %></td>
+        <td><%= link_to 'Edit', edit_shipment_path(shipment) %></td>
+        <td><%= link_to 'Destroy', shipment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= shipment.address_type %></td>
+        <td><%= shipment.company %></td>
+        <td><%= shipment.attention %></td>
+        <td><%= shipment.address1 %></td>
+        <td><%= shipment.zip %></td>
+        <td><%= shipment.city %></td>
+        <td><%= shipment.state %></td>
+        <td><%= shipment.sender_name %></td>
+        <td><%= shipment.sender_email %></td>
+        <td><%= shipment.sender_phone %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shipment', new_shipment_path %>
