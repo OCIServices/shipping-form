@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :offices
+
   resources :shipments
 
   get 'shipments/:id/pdf' => 'shipments#pdf', as: :pdf_shipment
