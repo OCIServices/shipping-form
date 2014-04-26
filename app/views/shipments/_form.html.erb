@@ -18,6 +18,12 @@
 			    <%= f.label :address_type, "Ship to Address" %><br>
 			    <%= f.select :address_type, ADDRESS_TYPES %>
 			  </div>
+				
+				<div class="field">
+					Select a CDW office as destination (if applicable):<br>
+					<%= select_tag( "office", options_for_select(@offices.map {|office| ["#{office.name} - #{office.address1}", office.id]}), {:prompt => "Destination not a CDW office"}) %>
+				</div>
+				
 			  <div class="field">
 			    <%= f.label :company %><br>
 			    <%= f.text_field :company %>
@@ -64,6 +70,10 @@
 			  </div>
 			</div>
 			<div class="right">
+			  <div class="field">
+			    If the sender is a CDW user, type their name here to populate the sender fields:<br />
+					<input class="typeahead" type="text" dir="ltr" id="cdwuser" placeholder="Search here....">
+			  </div>
 			  <div class="field">
 			    <%= f.label :sender_name %><br>
 			    <%= f.text_field :sender_name %>

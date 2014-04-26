@@ -34,6 +34,7 @@ STATES = {
   :NM => "NM - New Mexico",
   :NV => "NV - Nevada",
   :NY => "NY - New York",
+  :ON => "ON - Ontario",
   :OH => "OH - Ohio",
   :OK => "OK - Oklahoma",
   :OR => "OR - Oregon",

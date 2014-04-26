@@ -52,3 +52,9 @@ gem 'jquery-turbolinks'
 
 #dotenv-rails
 gem 'dotenv-rails'
+
+#twitter-typeahead-rails
+gem 'twitter-typeahead-rails'
+
+#active_directory
+gem 'active_directory'

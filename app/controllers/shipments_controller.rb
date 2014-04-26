@@ -26,10 +26,12 @@ class ShipmentsController < ApplicationController
   # GET /shipments/new
   def new
     @shipment = Shipment.new
+    @offices = Office.order(:name).all
   end
 
   # GET /shipments/1/edit
   def edit
+    @offices = Offices.all
   end
 
   # POST /shipments

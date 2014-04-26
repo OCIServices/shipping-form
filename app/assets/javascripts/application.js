@@ -16,4 +16,6 @@
 //= require turbolinks
 //= require jquery.turbolinks
 //= require dependent-fields
+//= require twitter/typeahead
 //= require_tree .
+

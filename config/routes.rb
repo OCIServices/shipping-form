@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
-  resources :offices
-
-  resources :shipments
 
   get 'shipments/:id/pdf' => 'shipments#pdf', as: :pdf_shipment
   
-  root 'shipments#index'
+  get 'offices/query/:name' => 'offices#query'
 
+  resources :offices
+
+  resources :shipments
+  
+  root 'shipments#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
