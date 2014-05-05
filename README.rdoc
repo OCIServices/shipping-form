@@ -1,28 +1,7 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Built and tested on Ruby 1.9.3-p392.
 
-Things you may want to cover:
+* Set a lot of environment varialbes in a file ".env" in the app root directory, using the sample
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Requires pdftk - may need to set the path in your ".env" file
