@@ -4,6 +4,7 @@ class ShipmentsController < ApplicationController
   # GET /shipments
   # GET /shipments.json
   def index
+    @offices = Office.order(:name).all
     @shipments = Shipment.all
   end
 
@@ -25,8 +26,8 @@ class ShipmentsController < ApplicationController
 
   # GET /shipments/new
   def new
-    @shipment = Shipment.new
     @offices = Office.order(:name).all
+    @shipment = Shipment.new
   end
 
   # GET /shipments/1/edit
@@ -37,11 +38,13 @@ class ShipmentsController < ApplicationController
   # POST /shipments
   # POST /shipments.json
   def create
+    @offices = Office.order(:name).all
     @shipment = Shipment.new(shipment_params)
 
     respond_to do |format|
       if @shipment.save
-        format.html { redirect_to @shipment, notice: 'Shipment was successfully created.' }
+        FormMailer.shipping_form_email(@shipment).deliver
+        format.html { redirect_to @shipment, notice: 'Shipment was successfully created.  An email was automatically sent for your shipment.' }
         format.json { render :show, status: :created, location: @shipment }
       else
         format.html { render :new }

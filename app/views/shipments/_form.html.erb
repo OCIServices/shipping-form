@@ -15,7 +15,7 @@
     <div class="col-group">
 			<div class="left">
 			  <div class="field">
-			    <%= f.label :address_type, "Ship to Address" %><br>
+			    <%= f.label :address_type, "Ship to Address" %><span class="required">*</span><br>
 			    <%= f.select :address_type, ADDRESS_TYPES %>
 			  </div>
 				
@@ -25,15 +25,15 @@
 				</div>
 				
 			  <div class="field">
-			    <%= f.label :company %><br>
+			    <%= f.label :company %><span class="required">*</span><br>
 			    <%= f.text_field :company %>
 			  </div>
 			  <div class="field">
-			    <%= f.label :attention %><br>
+			    <%= f.label :attention %><span class="required">*</span><br>
 			    <%= f.text_field :attention %>
 			  </div>
 			  <div class="field">
-			    <%= f.label :address1 %><br>
+			    <%= f.label :address1 %><span class="required">*</span><br>
 			    <%= f.text_field :address1 %>
 			  </div>
 			  <div class="field">
@@ -45,19 +45,19 @@
 			    <%= f.text_field :address3 %>
 			  </div>
 			  <div class="field">
-			    <%= f.label :city %><br>
+			    <%= f.label :city %><span class="required">*</span><br>
 			    <%= f.text_field :city %>
 			  </div>
 			  <div class="field">
-			    <%= f.label :state %><br>
+			    <%= f.label :state %><span class="required">*</span><br>
 			    <%= f.select :state, STATES %>
 			  </div>
 			  <div class="field">
-			    <%= f.label :zip %><br>
+			    <%= f.label :zip %><span class="required">*</span><br>
 			    <%= f.text_field :zip, :size => "12" %>
 			  </div>
 			  <div class="field">
-			    <%= f.label :country %><br>
+			    <%= f.label :country %><span class="required">*</span><br>
 			    <%= f.text_field :country %>
 			  </div>
 			  <div class="field">
@@ -72,18 +72,18 @@
 			<div class="right">
 			  <div class="field">
 			    If the sender is a CDW user, type their name here to populate the sender fields:<br />
-					<input class="typeahead" type="text" dir="ltr" id="cdwuser" placeholder="Search here....">
+					<input class="typeahead" type="text" dir="ltr" id="cdwuser" placeholder="Enter at least four characters....">
 			  </div>
 			  <div class="field">
-			    <%= f.label :sender_name %><br>
+			    <%= f.label :sender_name %><span class="required">*</span><br>
 			    <%= f.text_field :sender_name %>
 			  </div>
 			  <div class="field">
-			    <%= f.label :sender_email %><br>
+			    <%= f.label :sender_email %><span class="required">*</span><br>
 			    <%= f.text_field :sender_email, :size => "30" %>
 			  </div>
 			  <div class="field">
-			    <%= f.label :sender_phone %><br>
+			    <%= f.label :sender_phone %><span class="required">*</span><br>
 			    <%= f.text_field :sender_phone, :size => "15" %>
 			  </div>
 			  <div class="field">
@@ -91,7 +91,7 @@
 			    <%= f.text_field :changepoint_code %>
 			  </div>
 			  <div class="field">
-			    <%= f.label :delivery, "Delivery preferences" %><br>
+			    <%= f.label :delivery, "Delivery preferences" %><span class="required">*</span><br>
 			    <%= f.select :delivery, DELIVERY_TYPES %>
 			  </div>
 			  <div class="js-dependent-fields" data-select-id="shipment_delivery" data-option-value="I will specify">
@@ -122,7 +122,7 @@
 					</div>
 			  </div>
 			  <div class="field">
-			    <%= f.label :contents, "Please list shipment contents" %><br>
+			    <%= f.label :contents, "Please list shipment contents" %><span class="required">*</span><br>
 			    <%= f.text_area :contents, :cols => "40", :rows => "8" %>
 			  </div>
 			</div>
@@ -130,7 +130,7 @@
 		<div class="clear"></div>
 	  <div class="field">
 	    <%= f.label :instructions, "Please list special instructions" %><br>
-	    <%= f.text_area :instructions, :cols => "80", :rows => "5" %>
+	    <%= f.text_area :instructions, :cols => "40", :rows => "6" %>
 	  </div>
 	  <div class="actions">
 	    <%= f.submit %>

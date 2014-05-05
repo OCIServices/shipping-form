@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/richardun/active_directory.git
+  revision: 7f463789c254915861719d9651735c5959db1964
+  specs:
+    active_directory (1.2.9)
+      net-ldap (>= 0.1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -14,8 +21,6 @@ GEM
       activesupport (= 4.1.0)
       builder (~> 3.1)
       erubis (~> 2.7.0)
-    active_directory (1.5.5)
-      net-ldap (>= 0.1.1)
     activemodel (4.1.0)
       activesupport (= 4.1.0)
       builder (~> 3.1)
@@ -134,7 +139,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_directory
+  active_directory!
   coffee-rails (~> 4.0.0)
   dependent-fields-rails
   dotenv-rails

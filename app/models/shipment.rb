@@ -1,6 +1,6 @@
 class Shipment < ActiveRecord::Base
 
-  validates :address_type, :attention, :address1, :zip, :city, :sender_name, :sender_email, :sender_phone, :delivery, :state, :country, :contents, presence: true
+  validates :address_type, :attention, :address1, :zip, :city, :state, :country, :sender_name, :sender_email, :sender_phone, :delivery, :contents, presence: true
 
   validates :address_type, format: { with: %r{(Residential|Commercial)\Z}i,
     message: 'The Address Type must be a "Residential" or "Commercial"'

@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'PDF', pdf_shipment_path(@shipment) %> |
-<%= link_to 'Edit', edit_shipment_path(@shipment) %> |
-<%= link_to 'Back', shipments_path %>
+<%= link_to 'Download PDF', pdf_shipment_path(@shipment) %> |
+<%= link_to 'Create Another', new_shipment_path %>
 
 <p>
   <strong>Address type:</strong>

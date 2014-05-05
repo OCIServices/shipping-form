@@ -57,4 +57,8 @@ gem 'dotenv-rails'
 gem 'twitter-typeahead-rails'
 
 #active_directory
-gem 'active_directory'
+#gem 'active_directory'
+gem 'active_directory', :git => 'git://github.com/richardun/active_directory.git'
+
+#activeLDAP
+#gem 'activeldap'
