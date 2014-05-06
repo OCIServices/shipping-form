@@ -5,3 +5,6 @@
 * Set a lot of environment varialbes in a file ".env" in the app root directory, using the sample
 
 * Requires pdftk - may need to set the path in your ".env" file
+
+* Your mail server may require different settings and may require SSL certificates
+

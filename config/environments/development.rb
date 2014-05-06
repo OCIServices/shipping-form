@@ -34,16 +34,20 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  config.action_mailer.perform_deliveries = true
+
+  config.action_mailer.raise_delivery_errors = true
   
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
     address: ENV["EMAIL_SERVER_ADDRESS"],
     port: ENV["EMAIL_PORT"],
-  #  domain: ENV["EMAIL_DOMAIN"],
-    authentication: ENV["EMAIL_AUTHENTICATION"],
+    domain: ENV["EMAIL_DOMAIN"],
+    authentication: :plain,
     user_name: ENV["EMAIL_USERNAME"],
     password: ENV["EMAIL_PASSWORD"],
-    enable_starttls_auto: ENV["EMAIL_TLS"]
+    enable_starttls_auto: true
   }
 end

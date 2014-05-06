@@ -1,5 +1,5 @@
 class FormMailer < ActionMailer::Base
-  default from: "noreply@cdw.com"
+  default from: "videosupport@cdw.com"
   default to: "nick.mueller@cdw.com"
   
   def shipping_form_email(shipment)
