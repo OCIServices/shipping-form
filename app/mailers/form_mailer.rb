@@ -3,7 +3,7 @@ class FormMailer < ActionMailer::Base
   default to: "nick.mueller@cdw.com"
   
   def shipping_form_email(shipment)
-    attachments["shipping_form_#{shipment.id}.pdf"] = ShippingPdfForm.new(shipment).export
+    attachments["shipping_form_#{shipment.id}.pdf"] = File.read(ShippingPdfForm.new(shipment).export)
     mail(subject: 'New Shipping Request')
   end
 end
